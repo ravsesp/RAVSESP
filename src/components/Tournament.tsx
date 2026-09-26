@@ -193,7 +193,7 @@ export const Tournament: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
           
           {/* LEFT: Live Countdown Panel (7 cols) */}
-          <div className="lg:col-span-7 rounded-3xl bg-[#0d0d12]/90 border border-[#7A00FF]/45 p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between shadow-[0_0_35px_rgba(122,0,255,0.25)]">
+          <div className="lg:col-span-7 rounded-3xl bg-[#0d0d12]/90 border border-[#7A00FF]/45 p-4 sm:p-8 lg:p-10 relative overflow-hidden flex flex-col justify-between shadow-[0_0_35px_rgba(122,0,255,0.25)]">
             <div
               className="absolute -top-24 -left-24 w-60 h-60 bg-[#7A00FF]/20 rounded-full blur-3xl pointer-events-none"
               aria-hidden="true"
@@ -201,58 +201,58 @@ export const Tournament: React.FC = () => {
 
             <div>
               {/* Countdown Title */}
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
                 <div className="flex items-center gap-2.5">
-                  <Clock className="w-5 h-5 text-[#A020F0] animate-pulse" />
-                  <h3 className="font-heading text-xl sm:text-2xl font-black tracking-wider text-white">
+                  <Clock className="w-5 h-5 text-[#A020F0] animate-pulse shrink-0" />
+                  <h3 className="font-heading text-lg sm:text-2xl font-black tracking-wider text-white">
                     TOURNAMENT BEGINS IN
                   </h3>
                 </div>
-                <div className="px-3 py-1 rounded-md bg-[#181824] border border-[#7A00FF]/40 text-[#A020F0] font-sub text-xs font-bold tracking-widest">
+                <div className="self-start sm:self-auto px-3 py-1 rounded-md bg-[#181824] border border-[#7A00FF]/40 text-[#A020F0] font-sub text-xs font-bold tracking-widest whitespace-nowrap">
                   03 OCT 2026, 11:00 AM
                 </div>
               </div>
 
               {/* Countdown Digits */}
               {!timeLeft.isLive ? (
-                <div className="grid grid-cols-4 gap-2.5 sm:gap-4 my-8">
+                <div className="grid grid-cols-4 gap-2 sm:gap-4 my-6 sm:my-8">
                   {/* Days */}
-                  <div className="relative rounded-2xl bg-[#14141e] border border-[#7A00FF]/50 p-4 sm:p-6 text-center shadow-[0_0_15px_rgba(122,0,255,0.2)]">
-                    <div className="font-heading text-3xl sm:text-5xl font-black text-metallic">
+                  <div className="relative rounded-xl sm:rounded-2xl bg-[#14141e] border border-[#7A00FF]/60 px-2 py-3.5 sm:px-4 sm:py-6 text-center shadow-[0_0_15px_rgba(122,0,255,0.25)] flex flex-col items-center justify-center">
+                    <div className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white leading-none drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]">
                       {String(timeLeft.days).padStart(2, '0')}
                     </div>
-                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#A020F0] uppercase mt-2">
+                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-wider text-[#A020F0] uppercase mt-1.5 sm:mt-2">
                       DAYS
                     </div>
                   </div>
 
                   {/* Hours */}
-                  <div className="relative rounded-2xl bg-[#14141e] border border-[#7A00FF]/50 p-4 sm:p-6 text-center shadow-[0_0_15px_rgba(122,0,255,0.2)]">
-                    <div className="font-heading text-3xl sm:text-5xl font-black text-metallic">
+                  <div className="relative rounded-xl sm:rounded-2xl bg-[#14141e] border border-[#7A00FF]/60 px-2 py-3.5 sm:px-4 sm:py-6 text-center shadow-[0_0_15px_rgba(122,0,255,0.25)] flex flex-col items-center justify-center">
+                    <div className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white leading-none drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]">
                       {String(timeLeft.hours).padStart(2, '0')}
                     </div>
-                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#A020F0] uppercase mt-2">
+                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-wider text-[#A020F0] uppercase mt-1.5 sm:mt-2">
                       HOURS
                     </div>
                   </div>
 
                   {/* Minutes */}
-                  <div className="relative rounded-2xl bg-[#14141e] border border-[#7A00FF]/50 p-4 sm:p-6 text-center shadow-[0_0_15px_rgba(122,0,255,0.2)]">
-                    <div className="font-heading text-3xl sm:text-5xl font-black text-metallic">
+                  <div className="relative rounded-xl sm:rounded-2xl bg-[#14141e] border border-[#7A00FF]/60 px-2 py-3.5 sm:px-4 sm:py-6 text-center shadow-[0_0_15px_rgba(122,0,255,0.25)] flex flex-col items-center justify-center">
+                    <div className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white leading-none drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]">
                       {String(timeLeft.minutes).padStart(2, '0')}
                     </div>
-                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#A020F0] uppercase mt-2">
-                      MINUTES
+                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-wider text-[#A020F0] uppercase mt-1.5 sm:mt-2">
+                      MINS
                     </div>
                   </div>
 
                   {/* Seconds */}
-                  <div className="relative rounded-2xl bg-[#14141e] border border-[#A020F0] p-4 sm:p-6 text-center shadow-[0_0_20px_rgba(160,32,240,0.35)]">
-                    <div className="font-heading text-3xl sm:text-5xl font-black text-white">
+                  <div className="relative rounded-xl sm:rounded-2xl bg-[#14141e] border border-[#A020F0] px-2 py-3.5 sm:px-4 sm:py-6 text-center shadow-[0_0_20px_rgba(160,32,240,0.4)] flex flex-col items-center justify-center">
+                    <div className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white leading-none drop-shadow-[0_0_12px_rgba(160,32,240,0.7)]">
                       {String(timeLeft.seconds).padStart(2, '0')}
                     </div>
-                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#A020F0] uppercase mt-2">
-                      SECONDS
+                    <div className="font-sub text-[10px] sm:text-xs font-bold tracking-wider text-[#A020F0] uppercase mt-1.5 sm:mt-2">
+                      SECS
                     </div>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export const Tournament: React.FC = () => {
           </div>
 
           {/* RIGHT: Dynamic Scannable QR Code Panel (5 cols) */}
-          <div className="lg:col-span-5 rounded-3xl bg-[#0d0d12]/90 border border-[#7A00FF]/45 p-8 relative overflow-hidden flex flex-col items-center justify-between text-center shadow-[0_0_35px_rgba(122,0,255,0.25)]">
+          <div className="lg:col-span-5 rounded-3xl bg-[#0d0d12]/90 border border-[#7A00FF]/45 p-5 sm:p-8 relative overflow-hidden flex flex-col items-center justify-between text-center shadow-[0_0_35px_rgba(122,0,255,0.25)]">
             <div
               className="absolute -bottom-20 -right-20 w-52 h-52 bg-[#A020F0]/15 rounded-full blur-3xl pointer-events-none"
               aria-hidden="true"

@@ -22,7 +22,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     { label: 'Home', href: '#home', id: 'home', highlight: false },
     { label: 'About', href: '#about', id: 'about', highlight: false },
     { label: 'Tournament', href: '#tournament', id: 'tournament', highlight: true },
-    { label: 'Team', href: '#team', id: 'team', highlight: false },
     { label: 'Follow Us', href: '#follow-us', id: 'follow-us', highlight: false },
     { label: 'Contact', href: '#contact', id: 'contact', highlight: false },
   ];

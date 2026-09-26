@@ -9,7 +9,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Tournament } from './components/Tournament';
-import { Team } from './components/Team';
 import { FollowUs } from './components/FollowUs';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -18,7 +17,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'tournament', 'team', 'follow-us', 'contact'];
+    const sectionIds = ['home', 'about', 'tournament', 'follow-us', 'contact'];
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
 
@@ -64,17 +63,14 @@ export default function App() {
         {/* 3. BGMI TOURNAMENT 2026 */}
         <Tournament />
 
-        {/* 4. RAVS ESPORTS Team */}
-        <Team />
-
-        {/* 5. Follow Us (WhatsApp Group + Discord, no YouTube) */}
+        {/* 4. Follow Us (Instagram + Discord) */}
         <FollowUs />
 
-        {/* 6. Contact RAVS ESPORTS */}
+        {/* 5. Contact RAVS ESPORTS */}
         <Contact />
       </main>
 
-      {/* 7. Footer */}
+      {/* 6. Footer */}
       <Footer />
     </div>
   );

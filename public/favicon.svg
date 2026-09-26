@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#050505"/>
+  <defs>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C040FF"/>
+      <stop offset="50%" stop-color="#A020F0"/>
+      <stop offset="100%" stop-color="#7A00FF"/>
+    </linearGradient>
+    <linearGradient id="silverChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#D0D0D5"/>
+      <stop offset="100%" stop-color="#757580"/>
+    </linearGradient>
+    <linearGradient id="darkFeather" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A2A33"/>
+      <stop offset="100%" stop-color="#121216"/>
+    </linearGradient>
+    <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Crown feathers (top faceted crest) -->
+  <polygon points="50,6 57,20 50,30 43,20" fill="url(#silverChrome)"/>
+  <polygon points="57,10 65,24 58,32 50,22" fill="url(#darkFeather)"/>
+  <polygon points="43,10 35,24 42,32 50,22" fill="url(#darkFeather)"/>
+
+  <!-- Purple crystalline side spikes / wing crests -->
+  <polygon points="65,18 85,28 72,42 58,32" fill="url(#purpleGlow)"/>
+  <polygon points="35,18 15,28 28,42 42,32" fill="url(#purpleGlow)"/>
+  <polygon points="73,34 90,44 76,58 64,48" fill="url(#purpleGlow)"/>
+  <polygon points="27,34 10,44 24,58 36,48" fill="url(#purpleGlow)"/>
+  <polygon points="76,52 86,65 72,74 62,64" fill="url(#purpleGlow)"/>
+  <polygon points="24,52 14,65 28,74 38,64" fill="url(#purpleGlow)"/>
+
+  <!-- Central Raven Face & Beak -->
+  <polygon points="50,30 62,48 50,82 38,48" fill="#141418" stroke="#333340" stroke-width="0.8"/>
+  <!-- Central Beak Ridge -->
+  <polygon points="50,42 54,65 50,80 46,65" fill="url(#silverChrome)"/>
+
+  <!-- Glowing Electric Purple Eyes -->
+  <polygon points="44,43 38,45 42,47" fill="#E066FF" filter="url(#eyeGlow)"/>
+  <polygon points="56,43 62,45 58,47" fill="#E066FF" filter="url(#eyeGlow)"/>
+  <polygon points="45,44 40,45 43,46" fill="#FFFFFF"/>
+  <polygon points="55,44 60,45 57,46" fill="#FFFFFF"/>
+
+  <!-- Lower Chin Feathers / V Collar -->
+  <polygon points="50,80 60,66 50,92 40,66" fill="url(#purpleGlow)"/>
+</svg>

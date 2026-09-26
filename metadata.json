@@ -1,0 +1,6 @@
+{
+  "name": "RAVS ESPORTS | Rise. Compete. Conquer.",
+  "description": "RAVS ESPORTS — a competitive gaming and esports community for players, creators and gaming enthusiasts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

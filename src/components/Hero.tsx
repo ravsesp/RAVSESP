@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, Users, Share2, Trophy, ArrowRight } from 'lucide-react';
+import { ChevronDown, Share2, Trophy, ArrowRight } from 'lucide-react';
 import { RavsLogo } from './RavsLogo';
 
 interface HeroProps {
@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400 shadow-[0_0_6px_#34D399]" />
           </span>
           <span className="font-heading text-[11px] sm:text-xs font-bold tracking-wider text-white">
-            BGMI TOURNAMENT 2026 — 03 OCT, 11:00 AM — REGISTRATION LIVE (₹2000 PRIZE POOL)
+            BGMI TOURNAMENT 2026 — IN COLLABORATION WITH SPECTRUM ESPORTS — 03 OCT, 10:00 AM
           </span>
           <ArrowRight className="w-3.5 h-3.5 text-[#A020F0] group-hover:translate-x-1 transition-transform" />
         </button>
@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-lg">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
           {/* TOURNAMENT CTA Button */}
           <button
             type="button"
@@ -78,21 +78,11 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <span>BGMI TOURNAMENT</span>
           </button>
 
-          {/* EXPLORE TEAM Button */}
-          <button
-            type="button"
-            onClick={() => onNavigate('team')}
-            className="w-full sm:w-auto min-w-[170px] inline-flex items-center justify-center gap-2.5 px-6 py-4 font-heading text-sm font-bold tracking-widest text-[#E5E5E5] hover:text-white bg-[#101010]/90 hover:bg-[#18181f] border border-[#7A00FF]/50 hover:border-[#A020F0] rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(122,0,255,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7A00FF]"
-          >
-            <Users className="w-4 h-4" />
-            <span>EXPLORE TEAM</span>
-          </button>
-
           {/* FOLLOW US Button */}
           <button
             type="button"
             onClick={() => onNavigate('follow-us')}
-            className="w-full sm:w-auto min-w-[160px] inline-flex items-center justify-center gap-2.5 px-6 py-4 font-heading text-sm font-bold tracking-widest text-[#B3B3B3] hover:text-white bg-[#0e0e14] hover:bg-[#161620] border border-[#7A00FF]/30 hover:border-[#A020F0] rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto min-w-[170px] inline-flex items-center justify-center gap-2.5 px-6 py-4 font-heading text-sm font-bold tracking-widest text-[#B3B3B3] hover:text-white bg-[#0e0e14] hover:bg-[#161620] border border-[#7A00FF]/30 hover:border-[#A020F0] rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <Share2 className="w-4 h-4 text-[#A020F0]" />
             <span>FOLLOW US</span>

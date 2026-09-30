@@ -3,7 +3,7 @@ import { Phone, Copy, Check, Headphones, ShieldAlert } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const phoneNumber = '7661897164';
+  const phoneNumber = '9618485312';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(phoneNumber);

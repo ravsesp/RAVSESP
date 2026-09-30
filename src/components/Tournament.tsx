@@ -3,7 +3,7 @@ import QRCode from 'qrcode';
 import {
   Trophy,
   Calendar,
-  Wifi,
+  MapPin,
   Ticket,
   Clock,
   QrCode as QrIcon,
@@ -13,7 +13,7 @@ import {
 
 const REGISTRATION_URL = 'https://forms.gle/QtpSvuuu1D1hyF356';
 const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/Fr1sinawobW1hVO4LAMcYV?s=cl&p=a&mlu=4&ilr=4';
-const TOURNAMENT_TARGET_DATE = new Date('2026-10-03T11:00:00+05:30'); // 03 October 2026, 11:00 AM IST
+const TOURNAMENT_TARGET_DATE = new Date('2026-10-03T10:00:00+05:30'); // 03 October 2026, 10:00 AM IST
 
 export const Tournament: React.FC = () => {
   // Live Countdown state
@@ -86,6 +86,16 @@ export const Tournament: React.FC = () => {
             <span className="text-[#A020F0] drop-shadow-[0_0_20px_rgba(160,32,240,0.6)]">2026</span>
           </h2>
 
+          {/* Collaboration Announcement */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-gradient-to-r from-[#140e24] via-[#1f1238] to-[#140e24] border border-[#A020F0]/60 text-white mb-5 shadow-[0_0_25px_rgba(160,32,240,0.35)]">
+            <span className="font-sub text-xs sm:text-sm uppercase tracking-[0.2em] text-[#C4A0FF] font-semibold">
+              IN COLLABORATION WITH
+            </span>
+            <span className="font-heading text-xs sm:text-sm font-black text-white tracking-widest text-metallic">
+              SPECTRUM ESPORTS
+            </span>
+          </div>
+
           <p className="font-heading text-lg sm:text-2xl font-bold tracking-[0.35em] uppercase text-white/90 mb-4">
             THE BATTLE BEGINS
           </p>
@@ -129,25 +139,25 @@ export const Tournament: React.FC = () => {
               03 OCT 2026
             </div>
             <div className="mt-2 text-[11px] font-sub text-[#A020F0] font-semibold tracking-wider">
-              11:00 AM MATCHDAY
+              10:00 AM MATCHDAY
             </div>
           </div>
 
-          {/* Card 3: MODE */}
+          {/* Card 3: VENUE */}
           <div className="group relative rounded-2xl bg-[#101010]/90 backdrop-blur-sm p-5 sm:p-6 border border-[#7A00FF]/40 hover:border-[#A020F0] transition-all duration-300 hover:shadow-[0_0_25px_rgba(122,0,255,0.35)] flex flex-col justify-between overflow-hidden">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between mb-3">
               <span className="font-sub text-xs font-bold tracking-widest text-[#888899] uppercase">
-                MODE
+                VENUE
               </span>
               <div className="w-8 h-8 rounded-lg bg-[#181824] flex items-center justify-center text-[#A020F0]">
-                <Wifi className="w-4 h-4" />
+                <MapPin className="w-4 h-4" />
               </div>
             </div>
-            <div className="font-heading text-2xl sm:text-3xl font-black text-white">
-              ONLINE
+            <div className="font-heading text-base sm:text-lg lg:text-xl font-black text-white leading-tight">
+              St. Peter's Engineering College
             </div>
-            <div className="mt-2 text-[11px] font-sub text-[#A020F0] font-semibold tracking-wider">
-              CUSTOM ROOMS
+            <div className="mt-2 text-[11px] font-sub text-[#A020F0] font-semibold tracking-wider uppercase">
+              CAMPUS ARENA
             </div>
           </div>
 
@@ -209,7 +219,7 @@ export const Tournament: React.FC = () => {
                   </h3>
                 </div>
                 <div className="self-start sm:self-auto px-3 py-1 rounded-md bg-[#181824] border border-[#7A00FF]/40 text-[#A020F0] font-sub text-xs font-bold tracking-widest whitespace-nowrap">
-                  03 OCT 2026, 11:00 AM
+                  03 OCT 2026, 10:00 AM
                 </div>
               </div>
 
